@@ -9,14 +9,14 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center p-24 space-y-2">
-      <div className="flex items-center max-w-sm mx-auto">
+      <div className="flex items-center w-full">
         <label className="sr-only">Confirm</label>
         <div className="relative w-full">
           <input
             type="text"
             id="simple-search"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-4 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="Search branch name..."
+            placeholder="input the string to slugify..."
             required
             value={value}
             onChange={(e) => {
