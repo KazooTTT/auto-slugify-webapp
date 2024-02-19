@@ -53,7 +53,7 @@ export default function Home() {
   );
   const buttonDisabled = value.trim().length === 0;
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 space-y-2">
+    <main className="flex min-h-screen flex-col items-center justify-between py-24 px-2 lg:px-24 space-y-2">
       <div className="flex items-center w-full max-w-xl">
         <label className="sr-only">Confirm</label>
         <div className="relative w-full">
