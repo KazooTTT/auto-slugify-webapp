@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
-import { create } from "./action";
+import { createSlug } from "./action";
 import Link from "next/link";
+import { CopyableWrapper } from "@/components/copyableWrapper";
 
 export default function Home() {
   const [value, setValue] = useState("");
@@ -10,7 +11,7 @@ export default function Home() {
 
   const startSlugify = async () => {
     setLoading(true);
-    const newRes = await create(value);
+    const newRes = await createSlug(value);
     setRes(newRes);
     setLoading(false);
   };
@@ -89,7 +90,7 @@ export default function Home() {
         </div>
         {res.trim().length > 0 && (
           <div className="w-full text-center font-semibold text-gray-900 underline underline-offset-4 dark:text-white decoration-orange-500 decoration-wavy ">
-            {res}
+            <CopyableWrapper>{res}</CopyableWrapper>
           </div>
         )}
       </div>

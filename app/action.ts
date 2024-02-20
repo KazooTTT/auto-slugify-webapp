@@ -2,7 +2,7 @@
 
 import { getSlugResult } from "@kzttools/auto-slugify";
 
-export async function create(value: string) {
+export async function createSlug(value: string) {
   const newRes = await getSlugResult(value);
   return newRes;
 }
